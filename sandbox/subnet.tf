@@ -1,4 +1,4 @@
-resource "aws_subnet" "public_subnet" {
+resource "aws_subnet" "public" {
   for_each          = local.subnet_numbers
   vpc_id            = aws_vpc.vpc.id
   availability_zone = each.key
@@ -11,7 +11,7 @@ resource "aws_subnet" "public_subnet" {
   }
 }
 
-resource "aws_subnet" "private_subnet" {
+resource "aws_subnet" "private" {
   for_each          = local.subnet_numbers
   vpc_id            = aws_vpc.vpc.id
   availability_zone = each.key
