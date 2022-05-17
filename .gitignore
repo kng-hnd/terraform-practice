@@ -1,0 +1,4 @@
+sandbox/.terraform
+sandbox/terraform.tfstate.d
+sandbox/.terraform.lock.hcl
+sandbox/crash.log
